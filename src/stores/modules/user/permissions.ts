@@ -131,6 +131,7 @@ export const usePermissionsStore = defineStore('PermissionsStore', {
           if (permission.type === MenuType.TOP_TYPE) {
             importComponent = () => import('@/layout/index.vue')
           } else {
+            console.log(permission.component)
             importComponent = viewComponents.get(permission.component)
           }
           const menu: Menu = Object.assign({
